@@ -326,7 +326,7 @@ def main(args):
     logger.info("summarising results")
 
     for orf in orfs:
-        sgRPHT = len(orfs[orf]) / (mapped_reads / 10000)
+        sgRPHT = len(orfs[orf]) / (mapped_reads / 100000)
         if "novel" not in orf:
             sgRPTL = len(orfs[orf])/(orf_coverage[orf]/1000)
             canonical.write(args.sample+","+str(mapped_reads)+","+orf+","+str(len(orfs[orf]))+","+str(orf_coverage[orf])+","+str(sgRPTL)+","+str(sgRPHT)+"\n")
